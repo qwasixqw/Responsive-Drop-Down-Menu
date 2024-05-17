@@ -1,0 +1,170 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+}
+.header {
+	background-color: black;
+}
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0px 20px;
+}
+.header__menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 120px;
+}
+.header__logo {
+	font-size: 36px;
+	color: white;
+	padding: 10px 20px;
+	background-color: #707078;
+}
+.header__icon {
+	display: none;
+	width: 30px;
+	height: 18px;
+	position: relative;
+	z-index: 15;
+	cursor: pointer;
+}
+
+.header__icon span {
+	width: 100%;
+	height: 2px;
+	background-color: white;
+	position: absolute;
+	left: 0;
+	top: 50%;
+}
+
+.header__icon span:first-child {
+	top: 0;
+}
+
+.header__icon span:last-child {
+	top: 100%;
+}
+
+.nav {
+}
+.nav__list {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+.nav__item {
+}
+.nav__link {
+	font-size: 24px;
+	color: white;
+}
+
+.nav__link:hover {
+	text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+	.nav {
+		position: absolute;
+		top: 0;
+		left: 100%;
+		height: 100vh;
+		width: 100%;
+		background-color: #6f1a07;
+		display: flex;
+		transition: all 0.3s ease 0s;
+	}
+	.nav.active {
+		left: 0;
+	}
+	.nav__list {
+		padding-top: 30px;
+		flex-direction: column;
+		gap: 20px;
+		margin: auto;
+	}
+
+	.nav__link {
+		font-size: 34px;
+		line-height: 80px;
+	}
+
+	.header__icon {
+		display: block;
+	}
+
+	.header__icon span {
+		transition: all 0.3s ease 0s;
+	}
+
+	.header__icon.active span:first-child {
+		top: 50%;
+		transform: rotate(-45deg);
+	}
+	.header__icon.active span:nth-child(2) {
+		opacity: 0;
+	}
+	.header__icon.active span:last-child {
+		top: 50%;
+		transform: rotate(45deg);
+	}
+}
+
+.main {
+}
+.about-me {
+	background-color: #90e0ef;
+}
+.about-me__title {
+}
+.portfolio {
+	background-color: orange;
+}
+.portfolio__title {
+}
+.reviews {
+	background-color: #6f1a07;
+}
+.reviews__title {
+}
+.contacts {
+	background-color: #ffb5c2;
+}
+.contacts__title {
+}
+.subscribe {
+	background-color: #4a0d67;
+}
+.subscribe__title {
+}
+.footer {
+	background-color: black;
+}
+.footer__text {
+}
+
+.title {
+	font-size: 86px;
+	color: white;
+}
+
+.section {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.lock {
+	overflow: hidden;
+}
